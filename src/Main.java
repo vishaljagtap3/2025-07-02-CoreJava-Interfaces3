@@ -64,5 +64,20 @@ public class Main {
             System.out.println(student);
         }
 
+
+        System.out.println("---- One more way ----");
+
+        Util.sort(products);
+        for(Product product : products) {
+            System.out.println(product);
+        }
+
+        System.out.println();
+
+        Util.sort(students);
+        for(Student student : students) {
+            System.out.println(student);
+        }
+
     }
 }

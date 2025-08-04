@@ -1,4 +1,4 @@
-public class Product {
+public class Product implements Comparable {
     private int id;
     private String title;
     private int price;
@@ -7,6 +7,17 @@ public class Product {
         this.id = id;
         this.title = title;
         this.price = price;
+    }
+
+    public int compareTo(Object o) {
+        Product p = (Product) o;
+        if(this.price > p.price) {
+            return 1;
+        }
+        if(this.price < p.price) {
+            return -1;
+        }
+        return 0;
     }
 
     @Override
